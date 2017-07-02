@@ -113,7 +113,7 @@ export default class InfoTabs extends React.Component{
 		this.resetTabSelection(newState);
 		newState['TAB_'+tab].selected = true;
 		if(this.state['TAB_'+tab].dataStatus == 'init'){
-			this.fetchData(tab,url);
+			this.fetchData(tab,url.replace('http','https'));
 		}
 		this.setState(newState);
 	}

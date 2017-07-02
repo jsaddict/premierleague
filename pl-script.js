@@ -12223,7 +12223,7 @@ Object.defineProperty(exports, "__esModule", {
 var API_CONFIG = exports.API_CONFIG = {
 	headers: { 'X-Auth-Token': '18ea1409515c43cabf3cc7016aa93a5f' }
 };
-var LEAGUE_URL = exports.LEAGUE_URL = 'http://api.football-data.org/v1/competitions';
+var LEAGUE_URL = exports.LEAGUE_URL = 'https://api.football-data.org/v1/competitions';
 
 /***/ }),
 /* 70 */
@@ -28846,7 +28846,7 @@ var InfoTabs = function (_React$Component) {
 			this.resetTabSelection(newState);
 			newState['TAB_' + tab].selected = true;
 			if (this.state['TAB_' + tab].dataStatus == 'init') {
-				this.fetchData(tab, url);
+				this.fetchData(tab, url.replace('http', 'https'));
 			}
 			this.setState(newState);
 		}
